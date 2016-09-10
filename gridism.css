@@ -64,6 +64,21 @@
 .grid .golden-small,   .grid .w-g-s { width: 38.2716%; } /* Golden section: smaller piece */
 .grid .golden-large,   .grid .w-g-l { width: 61.7283%; } /* Golden section: larger piece */
 
+/* finer grain */
+.grid .one-sixth,      .grid .w-1-6 { width: 16.6666%; }
+.grid .two-sixth,      .grid .w-2-6 { width: 33.3333%; }
+.grid .three-sixth,    .grid .w-3-6 { width: 49.9999%; }
+.grid .four-sixth,     .grid .w-4-6 { width: 66.6664%; }
+.grid .five-sixth,     .grid .w-5-6 { width: 83.3331%; }
+
+.grid .one-eighth,      .grid .w-1-8 { width: 12.5%; }
+.grid .two-eighth,      .grid .w-2-8 { width: 25%; }
+.grid .three-eighth,    .grid .w-3-8 { width: 37.5%; }
+.grid .four-eighth,     .grid .w-4-8 { width: 50%; }
+.grid .five-eighth,     .grid .w-5-8 { width: 62.5%; }
+.grid .six-eighth,      .grid .w-6-8 { width: 75%; }
+.grid .seven-eighth,    .grid .w-7-8 { width: 87.5%; }
+
 /* Clearfix after every .grid */
 .grid {
   *zoom: 1;
@@ -120,6 +135,23 @@
   .only-on-mobiles {
     display: block !important;
   }
+}
+
+@media screen and (max-width: 960px) and (min-width: 568px) {
+    /* 6th and 8ths get flipped to 3rd and 4ths */
+  .grid .one-sixth,      .grid .w-1-6 { width: 33.3333%; }
+  .grid .two-sixth,      .grid .w-2-6 { width: 33.3333%; }
+  .grid .three-sixth,    .grid .w-3-6 { width: 66.6664%; }
+  .grid .four-sixth,     .grid .w-4-6 { width: 66.6664%; }
+  .grid .five-sixth,     .grid .w-5-6 { width: 100%; }
+
+  .grid .one-eighth,      .grid .w-1-8 { width: 25%; }
+  .grid .two-eighth,      .grid .w-2-8 { width: 25%; }
+  .grid .three-eighth,    .grid .w-3-8 { width: 50%; }
+  .grid .four-eighth,     .grid .w-4-8 { width: 50%; }
+  .grid .five-eighth,     .grid .w-5-8 { width: 75%; }
+  .grid .six-eighth,      .grid .w-6-8 { width: 75%; }
+  .grid .seven-eighth,    .grid .w-7-8 { width: 100%; }
 }
 
 /* Expand the wrap a bit further on larger screens */
